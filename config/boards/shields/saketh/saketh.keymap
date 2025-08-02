@@ -48,7 +48,7 @@
                 // Row 0 (15 keys)
                 &F1 &F2 &F3 &F4 &F5 &F6 &F7 &F8 &F9 &F10 &F11 &F12 &F13 &F14 &F15
                 // Row 1 (15 keys)
-                &EXCL &AT &HASH &DLLR &PRCNT &CIRC &AMPR &STAR &LPRN &RPRN &MINUS &EQUAL &BSPC &TAB &DEL
+                &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
                 // Row 2 (14 keys)
                 &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
                 // Row 3 (14 keys)
