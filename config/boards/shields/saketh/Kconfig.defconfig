@@ -1,0 +1,6 @@
+is SHIELD_SAKETH
+
+config ZMK_KEYBOARD_NAME
+    default "saketh"
+
+endif

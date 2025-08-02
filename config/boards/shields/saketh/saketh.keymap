@@ -23,19 +23,19 @@
 
         // This is the default layer (layer 0).
         // The key assignments are based on the new image you provided.
-        // The order of the keys here must match the `zmk,matrix-transform`
-        // property in your overlay file.
+        // The number of keys here must match the number of keys
+        // defined in the `zmk,matrix-transform` in your overlay file.
         base_layer {
             bindings = <
-                // Row 0
+                // Row 0 (15 keys)
                 &ESC &N1 &N2 &N3 &N4 &N5 &N6 &N7 &N8 &N9 &N0 &MINUS &EQUAL &BSPC &GRAVE
-                // Row 1
+                // Row 1 (15 keys)
                 &TAB &Q &W &E &R &T &Y &U &I &O &P &LBRC &RBRC &BSLS &PGUP
-                // Row 2
+                // Row 2 (14 keys)
                 &CAPS &A &S &D &F &G &H &J &K &L &SEMI &QUOT &ENTER &PGDN
-                // Row 3
+                // Row 3 (14 keys)
                 &LSHIFT &Z &X &C &V &B &N &M &COMMA &DOT &SLASH &RSHIFT &UP &DEL
-                // Row 4
+                // Row 4 (10 keys)
                 &LCTRL &LGUI &LALT &SPACE &MO(2) &MO(1) &LCTRL &LEFT &DOWN &RIGHT
             >;
         };
@@ -45,16 +45,16 @@
         // The bindings here are for function keys and other special keys.
         func_layer {
             bindings = <
-                // Row 0
+                // Row 0 (15 keys)
                 &F1 &F2 &F3 &F4 &F5 &F6 &F7 &F8 &F9 &F10 &F11 &F12 &F13 &F14 &F15
-                // Row 1
+                // Row 1 (15 keys)
                 &EXCL &AT &HASH &DLLR &PRCNT &CIRC &AMPR &STAR &LPRN &RPRN &MINUS &EQUAL &BSPC &TAB &DEL
-                // Row 2
-                &LEFT &DOWN &UP &RIGHT &HOME &END &PGUP &PGDN &CAPS &EQL &BSPC &LBRC &RBRC &ENTER &BKSP
-                // Row 3
-                &LSHIFT &RSHIFT &LCTRL &RCTRL &LALT &RALT &LGUI &RGUI &LS(EQUAL) &LS(MINUS) &LS(RPRN) &LS(LPRN) &LS(STAR) &LS(AMPR) &LS(CIRC)
-                // Row 4
-                &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
+                // Row 2 (14 keys)
+                &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
+                // Row 3 (14 keys)
+                &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
+                // Row 4 (10 keys)
+                &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
             >;
         };
 
@@ -62,16 +62,16 @@
         // It's activated when you hold down the key assigned with `MO(2)`.
         media_layer {
             bindings = <
-                // Row 0
+                // Row 0 (15 keys)
                 &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
-                // Row 1
-                &BT_SEL 0 &BT_SEL 1 &BT_SEL 2 &BT_SEL 3 &BT_SEL 4 &BT_CLR &BT_PWR &BT_SEL 0 &BT_SEL 1 &BT_SEL 2 &BT_SEL 3 &BT_SEL 4 &BT_CLR &BT_PWR
-                // Row 2
-                &MUTE &VOL_UP &VOL_DN &PLAY_PAUSE &PREV &NEXT &K_MUTE &K_VOLUP &K_VOLDN &K_PLAY_PAUSE &K_PREV &K_NEXT &BT_SEL 0 &BT_SEL 1 &BT_SEL 2
-                // Row 3
-                &BT_SEL 3 &BT_SEL 4 &BT_CLR &BT_PWR &BT_SEL 0 &BT_SEL 1 &BT_SEL 2 &BT_SEL 3 &BT_SEL 4 &BT_CLR &BT_PWR &BT_SEL 0 &BT_SEL 1 &BT_SEL 2 &BT_SEL 3
-                // Row 4
-                &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
+                // Row 1 (15 keys)
+                &BT_SEL 0 &BT_SEL 1 &BT_SEL 2 &BT_SEL 3 &BT_SEL 4 &BT_CLR &BT_PWR &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
+                // Row 2 (14 keys)
+                &MUTE &VOL_UP &VOL_DN &PLAY_PAUSE &PREV &NEXT &K_MUTE &K_VOLUP &K_VOLDN &K_PLAY_PAUSE &K_PREV &K_NEXT &TRANS &TRANS
+                // Row 3 (14 keys)
+                &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
+                // Row 4 (10 keys)
+                &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS &TRANS
             >;
         };
     };

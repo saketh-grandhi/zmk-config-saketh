@@ -1,0 +1,2 @@
+config SHIELD_SAKETH
+    def_bool $(shield_list_contains, saketh)
