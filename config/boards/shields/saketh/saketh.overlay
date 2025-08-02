@@ -8,6 +8,7 @@
 // physical layout definition. It combines the physical layout
 // with a corresponding key scan matrix and a matrix transform.
 
+#include "common/65percent/ansi.dtsi"
 #include <physical_layouts.dtsi>
 
 / {
