@@ -1,91 +1,76 @@
-/*
- * Copyright (c) 2021 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
- 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-
-
-/ {
-    behaviors {
-        ht_tp: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        skq: sticky_key_quick_release {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <1000>;
-            quick-release;
-            ignore-modifiers;
-        };
-    };
-    keymap {
-        compatible = "zmk,keymap";
-        
-        // This is the default layer (layer 0).
-        // The key assignments are based on the ANSI-style layout from your previous image.
-        // The order of the keys here must match the `zmk,matrix-transform`
-        // property in your overlay file.
-        default_layer {
-            bindings = <
-                // Row 0 (15 keys)
-                &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL &kp BSPC &none
-                // Row 1 (15 keys)
-                &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp LBRC &kp RBRC &kp BSLS &kp PGUP
-                // Row 2 (14 keys)
-                &kp CAPS &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI &kp SQT &kp ENTER &kp PGDN
-                // Row 3 (14 keys)
-                &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp RSHIFT &kp UP &kp DEL
-                // Row 4 (10 keys)
-                &kp LCTRL &kp LGUI &kp LALT &kp SPACE &mo 1 &mo 2 &kp RALT &kp LEFT &kp DOWN &kp RIGHT
-            >;
-        };
-
-        // This is layer 1, the function layer.
-        // It's activated when you hold down the key assigned with `mo 1`.
-        // This is a generic function layer for a 5x15 matrix.
-        func_layer {
-            bindings = <
-                // Row 0 (15 keys)
-                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp F13 &kp F14 &kp F15
-                // Row 1 (15 keys)
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                // Row 2 (14 keys)
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                // Row 3 (14 keys)
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                // Row 4 (10 keys)
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            >;
-        };
-        
-        // This is layer 2, the media and Bluetooth layer.
-        // It's activated when you hold down the key assigned with `mo 2`.
-        // This is a generic media layer for a 5x15 matrix.
-        media_layer {
-            bindings = <
-                // Row 0 (15 keys)
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &none
-                // Row 1 (15 keys)
-                &trans &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                // Row 2 (14 keys)
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &none
-                // Row 3 (14 keys)
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                // Row 4 (10 keys)
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            >;
-        };
-    };
-};
+{
+  "layouts": {
+    "65% ANSI": {
+      "layout": [
+        { "x": 0.0, "y": 0.0 },
+        { "x": 1.0, "y": 0.0 },
+        { "x": 2.0, "y": 0.0 },
+        { "x": 3.0, "y": 0.0 },
+        { "x": 4.0, "y": 0.0 },
+        { "x": 5.0, "y": 0.0 },
+        { "x": 6.0, "y": 0.0 },
+        { "x": 7.0, "y": 0.0 },
+        { "x": 8.0, "y": 0.0 },
+        { "x": 9.0, "y": 0.0 },
+        { "x": 10.0, "y": 0.0 },
+        { "x": 11.0, "y": 0.0 },
+        { "x": 12.0, "y": 0.0 },
+        { "x": 13.0, "y": 0.0, "w": 2.0 },
+        { "x": 15.0, "y": 0.0 },
+        { "x": 0.0, "y": 1.0, "w": 1.5 },
+        { "x": 1.5, "y": 1.0 },
+        { "x": 2.5, "y": 1.0 },
+        { "x": 3.5, "y": 1.0 },
+        { "x": 4.5, "y": 1.0 },
+        { "x": 5.5, "y": 1.0 },
+        { "x": 6.5, "y": 1.0 },
+        { "x": 7.5, "y": 1.0 },
+        { "x": 8.5, "y": 1.0 },
+        { "x": 9.5, "y": 1.0 },
+        { "x": 10.5, "y": 1.0 },
+        { "x": 11.5, "y": 1.0 },
+        { "x": 12.5, "y": 1.0 },
+        { "x": 13.5, "y": 1.0, "w": 1.5 },
+        { "x": 15.0, "y": 1.0 },
+        { "x": 0.0, "y": 2.0, "w": 1.75 },
+        { "x": 1.75, "y": 2.0 },
+        { "x": 2.75, "y": 2.0 },
+        { "x": 3.75, "y": 2.0 },
+        { "x": 4.75, "y": 2.0 },
+        { "x": 5.75, "y": 2.0 },
+        { "x": 6.75, "y": 2.0 },
+        { "x": 7.75, "y": 2.0 },
+        { "x": 8.75, "y": 2.0 },
+        { "x": 9.75, "y": 2.0 },
+        { "x": 10.75, "y": 2.0 },
+        { "x": 11.75, "y": 2.0 },
+        { "x": 12.75, "y": 2.0, "w": 2.25 },
+        { "x": 15.0, "y": 2.0 },
+        { "x": 0.0, "y": 3.0, "w": 2.25 },
+        { "x": 2.25, "y": 3.0 },
+        { "x": 3.25, "y": 3.0 },
+        { "x": 4.25, "y": 3.0 },
+        { "x": 5.25, "y": 3.0 },
+        { "x": 6.25, "y": 3.0 },
+        { "x": 7.25, "y": 3.0 },
+        { "x": 8.25, "y": 3.0 },
+        { "x": 9.25, "y": 3.0 },
+        { "x": 10.25, "y": 3.0 },
+        { "x": 11.25, "y": 3.0 },
+        { "x": 12.25, "y": 3.0, "w": 1.75 },
+        { "x": 14.0, "y": 3.0 },
+        { "x": 15.0, "y": 3.0 },
+        { "x": 0.0, "y": 4.0, "w": 1.25 },
+        { "x": 1.25, "y": 4.0, "w": 1.25 },
+        { "x": 2.5, "y": 4.0, "w": 1.25 },
+        { "x": 3.75, "y": 4.0, "w": 6.25 },
+        { "x": 10.0, "y": 4.0 },
+        { "x": 11.0, "y": 4.0 },
+        { "x": 12.0, "y": 4.0 },
+        { "x": 13.0, "y": 4.0 },
+        { "x": 14.0, "y": 4.0 },
+        { "x": 15.0, "y": 4.0 }
+      ]
+    }
+  }
+}
