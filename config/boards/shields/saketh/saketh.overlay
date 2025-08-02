@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-// This is a ZMK overlay file for a Pro Micro nRF52840 board.
+// This is a ZMK overlay file for a Pro Micro nRF52840.
 // The GPIO pin assignments in this file have been updated to
 // match the pinout diagram you provided. You will still need to
 // verify that this matches your keyboard's physical wiring.
